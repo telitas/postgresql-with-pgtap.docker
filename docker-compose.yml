@@ -1,0 +1,17 @@
+# This file is released under the CC0 1.0 Universal (CC0 1.0) Public Domain Dedication.
+# See the LICENSE.txt file or https://creativecommons.org/publicdomain/zero/1.0/ for details.
+
+version: '3.1'
+services:
+  db:
+    image: postgresql-with-pgtap
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        postgres_version: latest
+        pgtap_version: 1.2.0
+    environment:
+      POSTGRES_PASSWORD: mysecretpassword
+    ports:
+      - 5432:5432
