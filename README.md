@@ -28,6 +28,7 @@ docker compose up -d
 
 Next, connect to container via client application and run the following SQL only once.
 
+(If you use docker-compose.yml as default, this SQL will be run automatically.)
 ```SQL
 CREATE EXTENSION pgtap;
 ```

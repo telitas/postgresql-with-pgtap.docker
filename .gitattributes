@@ -1,5 +1,6 @@
 *           text=auto eol=lf
 *.yml       text
 Dockerfile  text
+*.sql       text
 *.md        text
 *.txt       text
