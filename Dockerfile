@@ -9,10 +9,10 @@ ARG pgtap_version
 LABEL dev.telitas.project.repository="https://github.com/telitas/postgresql-with-pgtap.docker"
 LABEL dev.telitas.base.repository="https://hub.docker.com/_/postgres"
 
-RUN apt update
-RUN apt install -y unzip
-RUN apt install -y make
-RUN apt install -y patch
+RUN apt-get update
+RUN apt-get install -y unzip
+RUN apt-get install -y make
+RUN apt-get install -y patch
 
 RUN cpan cpan TAP::Parser::SourceHandler::pgTAP
 
@@ -25,4 +25,4 @@ RUN make install --directory=/tmp/pgtap
 # RUN make installcheck --directory=/tmp/pgtap
 
 RUN rm -rf /tmp/*
-RUN apt clean
+RUN apt-get clean
